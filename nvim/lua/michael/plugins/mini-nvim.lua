@@ -4,7 +4,9 @@ return {
 	lazy = false,
 	config = function()
 		local statusline = require("mini.statusline")
-		statusline.setup({})
+		statusline.setup({
+			set_vim_settings = false,
+		})
 		-- Line:Column
 		statusline.section_location = function()
 			return "%2l:%-2v"
