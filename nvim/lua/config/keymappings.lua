@@ -11,7 +11,6 @@ vim.keymap.set("v", "y", "myy`y")
 
 vim.keymap.set("n", "q:", ":q")
 vim.keymap.set("c", "W<cr>", "w<cr>")
-vim.keymap.set("c", "Wq<cr>", "wq<cr>")
 
 -- Insertion of ; or ,
 vim.keymap.set("i", ";;", "<Esc>A;")

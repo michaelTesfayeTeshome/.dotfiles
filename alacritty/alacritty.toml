@@ -9,6 +9,7 @@ style = "JetBrainsMono NF"
 history = 10000
 
 [window]
+startup_mode = "Maximized"
 opacity = 0.7
 decorations = "None"
 
