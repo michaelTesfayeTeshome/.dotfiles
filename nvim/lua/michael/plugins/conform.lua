@@ -1,6 +1,7 @@
 return {
 	"stevearc/conform.nvim",
 	lazy = true,
+    event = "BufWritePre",
 	opts = {
 		notify_on_error = false,
 		format_on_save = {
@@ -14,6 +15,7 @@ return {
 			-- python = { "isort", "black" },
 			-- Use a sub-list to run only the first available formatter
 			javascript = { { "prettierd", "prettier" } },
+			javascriptreact = { { "prettierd", "prettier" } },
 		},
 	},
 }
