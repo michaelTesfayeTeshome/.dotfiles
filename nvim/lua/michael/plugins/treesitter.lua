@@ -1,0 +1,45 @@
+return {
+	"nvim-treesitter/nvim-treesitter",
+	lazy = false,
+	build = ":TSUpdate",
+	config = function()
+		local configs = require("nvim-treesitter.configs")
+		configs.setup({
+			ensure_installed = {
+				"c",
+				"lua",
+				"vim",
+				"vimdoc",
+				"query",
+				"lua",
+				"vue",
+				"sql",
+				"regex",
+				"python",
+				"php",
+				"phpdoc",
+				"json",
+				"javascript",
+				"java",
+				"html",
+				"hurl",
+				"gitignore",
+				"gitcommit",
+				"dockerfile",
+				"css",
+				"cmake",
+				"bash",
+				"yaml",
+				"toml",
+				"rust",
+			},
+			sync_install = false,
+			ignore_install = {},
+			modules = {},
+			-- Autoinstall languages that are not installed
+			auto_install = false,
+			highlight = { enable = true },
+			indent = { enable = true },
+		})
+	end,
+}
