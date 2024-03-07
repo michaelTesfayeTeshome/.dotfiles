@@ -39,3 +39,7 @@ vim.opt.backup = true
 vim.opt.backupdir:remove(".")
 
 vim.opt.laststatus = 3
+
+vim.opt.showmode = false -- when using a status line plugin
+
+vim.opt.cursorline = true
