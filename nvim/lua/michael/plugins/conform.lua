@@ -1,7 +1,7 @@
 return {
 	"stevearc/conform.nvim",
 	lazy = true,
-    event = "BufWritePre",
+	event = "BufWritePre",
 	opts = {
 		notify_on_error = false,
 		format_on_save = {
@@ -16,6 +16,15 @@ return {
 			-- Use a sub-list to run only the first available formatter
 			javascript = { { "prettierd", "prettier" } },
 			javascriptreact = { { "prettierd", "prettier" } },
+			vue = { "prettier" },
+			css = { "prettier" },
+			scss = { "prettier" },
+			less = { "prettier" },
+			html = { "prettier" },
+			json = { "prettier" },
+			jsonc = { "prettier" },
+			yaml = { "prettier" },
+			markdown = { "prettier" },
 		},
 	},
 }
