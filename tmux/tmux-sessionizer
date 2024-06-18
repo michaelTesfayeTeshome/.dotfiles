@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+
+SESSION=$(find $HOME/.dotfiles $HOME/workspace/personal -mindepth 1 -maxdepth 1 -type d | fzf)
+# if the directory name has a period or a space, replace by an underscore
+SESSION_NAME=$(basename "$SESSION" | tr ." " _)
+
+# if tmux doen't find session it throws an error
+if ! tmux has-session -t "$SESSION_NAME" 2> /dev/null; then
+    tmux new-session -s "$SESSION_NAME" -c "$SESSION" -d 
+fi
+
+tmux switch-client -t "$SESSION_NAME"
