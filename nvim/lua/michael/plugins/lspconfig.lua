@@ -45,6 +45,17 @@ return {
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 		local servers = {
+			gopls = {
+				settings = {
+					gopls = {
+						analyses = {
+							unusedparams = true,
+						},
+						staticcheck = true,
+						gofumpt = true,
+					},
+				},
+			},
 			clangd = {},
 			tailwindcss = {},
 			tsserver = {},
@@ -89,13 +100,13 @@ return {
 					["textDocument/publishDiagnostics"] = function() end,
 				},
 			},
-			volar = {
+			--[[ volar = {
 				on_attach = function(client, bufnr)
 					client.server_capabilities.documentFormattingProvider = false
 					client.server_capabilities.documentRangeFormattingProvider = false
 				end,
 				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
-			},
+			}, ]]
 			lua_ls = {
 				-- cmd = {...},
 				-- filetypes { ...},
