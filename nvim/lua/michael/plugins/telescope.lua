@@ -31,7 +31,7 @@ return {
 				layout_config = {
 					prompt_position = "top",
 				},
-				file_ignore_patterns = { ".git/", "vendor/", "node_modules/" },
+				file_ignore_patterns = { ".git/", "vendor/", "node_modules/", "public/build" },
 			},
 			pickers = {
 				find_files = { hidden = true }, -- show hidden file
@@ -48,7 +48,7 @@ return {
 		local builtin = require("telescope.builtin")
 		vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
 		vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "[S]earch [F]iles" })
-		vim.keymap.set("n", "<leader>p", builtin.buffers, { desc = "[ ] Find existing buffers" })
+		-- vim.keymap.set("n", "<leader>p", builtin.buffers, { desc = "[ ] Find existing buffers" })
 		vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
 		vim.keymap.set("n", "<leader>fw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
 
