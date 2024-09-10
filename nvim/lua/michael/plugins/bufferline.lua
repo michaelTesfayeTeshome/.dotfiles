@@ -6,5 +6,6 @@ return {
 	opts = {},
 	keys = {
 		{ "<leader>p", ":BufferLineCycleNext<cr>", desc = "Next Buffer" },
+		{ "<leader>n", ":BufferLineCyclePrev<cr>", desc = "Previous Buffer" },
 	},
 }
