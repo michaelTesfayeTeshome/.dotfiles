@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-SESSION=$(find $HOME/.dotfiles $HOME/workspace/personal -mindepth 1 -maxdepth 1 -type d | fzf)
+SESSION=$(find $HOME/.dotfiles $HOME/workspace/personal -mindepth 1 -maxdepth 2 -type d | fzf)
 # if the directory name has a period or a space, replace by an underscore
 SESSION_NAME=$(basename "$SESSION" | tr ." " _)
 
