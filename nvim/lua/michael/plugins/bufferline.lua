@@ -5,7 +5,7 @@ return {
 	lazy = false,
 	opts = {},
 	keys = {
-		{ "<leader>p", ":BufferLineCycleNext<cr>", desc = "Next Buffer" },
-		{ "<leader>n", ":BufferLineCyclePrev<cr>", desc = "Previous Buffer" },
+		{ "<leader>n", ":BufferLineCycleNext<cr>", desc = "Next Buffer" },
+		{ "<leader>p", ":BufferLineCyclePrev<cr>", desc = "Previous Buffer" },
 	},
 }
