@@ -58,7 +58,13 @@ return {
 			},
 			clangd = {},
 			tailwindcss = {},
-			tsserver = {},
+			ts_ls = {
+				enabled = true,
+				filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+				settings = {
+					complete_function_calls = true,
+				},
+			},
 			intelephense = {
 				commands = {
 					IntelephenseIndex = {
