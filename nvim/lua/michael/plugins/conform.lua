@@ -14,10 +14,10 @@ return {
 			-- Conform will run multiple formatters sequentially
 			-- python = { "isort", "black" },
 			-- Use a sub-list to run only the first available formatter
-			javascript = { { "prettierd", "prettier" } },
-			javascriptreact = { { "prettierd", "prettier" } },
-			typescript = { { "prettierd", "prettier" } },
-			typescriptreact = { { "prettierd", "prettier" } },
+			javascript = { "prettierd", "prettier", stop_after_first = true },
+			javascriptreact = { "prettierd", "prettier", stop_after_first = true },
+			typescript = { "prettierd", "prettier", stop_after_first = true },
+			typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 			vue = { "prettier" },
 			css = { "prettier" },
 			scss = { "prettier" },
@@ -27,7 +27,7 @@ return {
 			jsonc = { "prettier" },
 			yaml = { "prettier" },
 			markdown = { "prettier" },
-			php = { { "pint" } },
+			php = { "pint" },
 		},
 	},
 }
